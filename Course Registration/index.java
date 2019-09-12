@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class datastructurehw1 implements Serializable{
+public class index implements Serializable{
 	private static final String String = null;
 
 	public static void main (String[] args) throws IOException{
