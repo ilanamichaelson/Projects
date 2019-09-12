@@ -1,3 +1,7 @@
-# Projects
-Fitness App
-Registration System
+My projects: 
+
+* Fitness App
+
+* Registration System
+
+Enjoy!
