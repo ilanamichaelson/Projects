@@ -71,6 +71,7 @@ var data = (localStorage.getItem('todoList')) ? JSON.parse(localStorage.getItem(
   
   function completeItem() {
     var time= window.prompt('For how many seconds would you like to do this exercise?               Timer starts when you click ok...', '');
+    /* validate user input */
     var timeInt = parseInt(time, 10)
     if (isNaN(timeInt)){
         alert('Invalid entry');
@@ -93,7 +94,7 @@ var data = (localStorage.getItem('todoList')) ? JSON.parse(localStorage.getItem(
         var id = parent.id;
         var value = item.innerText;
 
-
+        /* user input time is up; notify the user*/
         function timesUp() {
             window.alert("Time's Up! You completed the exercise.");
             if (id === 'todo') {
@@ -105,7 +106,7 @@ var data = (localStorage.getItem('todoList')) ? JSON.parse(localStorage.getItem(
             }
             dataObjectUpdated();
         
-            // Check if the item should be added to the completed list or to re-added to the todo list
+            /* add item to completed list; if item was already completed, keep it where it is*/
             var target = (id === 'todo') ? document.getElementById('completed'):document.getElementById('completed');
         
             parent.removeChild(item);
